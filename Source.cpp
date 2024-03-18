@@ -1,30 +1,20 @@
 #include <iostream>
 using namespace std;
-
-
+float celsiusToFahrenheit(float day);
+ 
 int main() {
-	float mon, tue, wed, thu, fri, sat, sun;
-	float fahrenheit;
+	float day;
 	float allTemps[7];
-	cout << "Please enter temperatures for each day in celcius.\n";
-		cin >> mon >> tue >> wed >> thu >> fri >> sat >> sun;
-	fahrenheit = mon * 9 / 5 + 32;
-	allTemps[0] = fahrenheit;
-	fahrenheit = tue * 9 / 5 + 32;
-	allTemps[1] = fahrenheit;
-	fahrenheit = wed * 9 / 5 + 32;
-	allTemps[2] = fahrenheit;
-	fahrenheit = thu * 9 / 5 + 32;
-	allTemps[3] = fahrenheit;
-	fahrenheit = fri * 9 / 5 + 32;
-	allTemps[4] = fahrenheit;
-	fahrenheit = sat * 9 / 5 + 32;
-	allTemps[5] = fahrenheit;
-	fahrenheit = sun * 9 / 5 + 32;
-	allTemps[6] = fahrenheit;
+	for (int x = 0; x < 7; x++)
+	{
+		cout << "Please enter temperatures for each day in celcius.\n";
+		cin >> day;
+		allTemps[x] = celsiusToFahrenheit(day);
+	}
+
 	// Print out temperatures in fahrenheit
 	cout << "Temperatures for the week in fahrenheit: \n";
-		cout << "Mon: " << allTemps[0] << endl;
+	cout << "Mon: " << allTemps[0] << endl;
 	cout << "Tues: " << allTemps[1] << endl;
 	cout << "Wed: " << allTemps[2] << endl;
 	cout << "Thur: " << allTemps[3] << endl;
@@ -32,4 +22,11 @@ int main() {
 	cout << "Sat: " << allTemps[5] << endl;
 	cout << "Sun: " << allTemps[6] << endl;
 	return 0;
+}
+float celsiusToFahrenheit(float day) {
+	/*float day;*/
+	float fahrenheit;
+	float allTemps[7];
+	fahrenheit = day * 9 / 5 + 32;
+	return fahrenheit;
 }
