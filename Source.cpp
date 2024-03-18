@@ -6,8 +6,7 @@ int main() {
 	float mon, tue, wed, thu, fri, sat, sun;
 	float fahrenheit;
 	float allTemps[7];
-	cout << "Please enter temperatures for each day in
-		celcius.\n";
+	cout << "Please enter temperatures for each day in celcius.\n";
 		cin >> mon >> tue >> wed >> thu >> fri >> sat >> sun;
 	fahrenheit = mon * 9 / 5 + 32;
 	allTemps[0] = fahrenheit;
@@ -24,8 +23,7 @@ int main() {
 	fahrenheit = sun * 9 / 5 + 32;
 	allTemps[6] = fahrenheit;
 	// Print out temperatures in fahrenheit
-	cout << "Temperatures for the week in
-		fahrenheit: \n";
+	cout << "Temperatures for the week in fahrenheit: \n";
 		cout << "Mon: " << allTemps[0] << endl;
 	cout << "Tues: " << allTemps[1] << endl;
 	cout << "Wed: " << allTemps[2] << endl;
